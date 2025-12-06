@@ -27,7 +27,7 @@
       }
 
       nav {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         padding-bottom: 10px;
       }
 
@@ -56,7 +56,7 @@
       .header-table {
         width: 100%;
         border-collapse: collapse;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
 
       .header-table td {
@@ -85,6 +85,12 @@
         object-fit: cover;
         border: 2px solid #e0e0e0;
         flex-shrink: 0;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+      }
+
+      .profile-photo:hover {
+        opacity: 0.8;
       }
 
       .header-text {
@@ -119,39 +125,66 @@
       }
 
       section {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
       }
 
       section h2 {
         font-size: 1.3em;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         color: #222;
         font-weight: normal;
       }
 
       .item {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         padding-bottom: 20px;
+        border-bottom: 1px solid #f0f0f0;
       }
 
       .item:last-child {
         border-bottom: none;
+        padding-bottom: 0;
       }
 
       .item-content-wrapper {
         display: flex;
-        gap: 15px;
+        gap: 18px;
         align-items: flex-start;
       }
 
       .item-image {
-        width: 100px;
-        height: 70px;
+        width: 150px;
+        height: 120px;
         object-fit: cover;
         border-radius: 3px;
         flex-shrink: 0;
         background-color: #f5f5f5;
         border: 1px solid #e0e0e0;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+      }
+
+      .item-image:hover {
+        opacity: 0.8;
+      }
+
+      .item-image[src$=".gif"] {
+        object-fit: contain;
+        background-color: #f0f0f0;
+      }
+
+      .image-link {
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .profile-photo {
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+      }
+
+      .profile-photo:hover {
+        opacity: 0.8;
       }
 
       .item-content {
@@ -177,6 +210,17 @@
         font-size: 0.85em;
         font-style: italic;
         margin-bottom: 8px;
+      }
+
+      .item-date a {
+        color: #888;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .item-date a:hover {
+        color: #0066cc;
+        text-decoration: underline;
       }
 
       .item-links {
@@ -242,7 +286,9 @@
         <tr>
           <td>
             <div class="header-content">
-              <img src="images/profile_pic.jpg" alt="Profile Photo" class="profile-photo" onerror="this.style.display='none';">
+              <a href="images/profile_pic.jpg" target="_blank" class="image-link">
+                <img src="images/profile_pic.jpg" alt="Profile Photo" class="profile-photo" onerror="this.style.display='none';">
+              </a>
               <div class="header-text">
                 <h1>Ariana Lei</h1>
                 <div class="title">Senior High Schooler</div>
@@ -271,17 +317,17 @@
         
         <div class="item">
           <div class="item-content-wrapper">
-            <img src="images/project1.png" alt="Project 1" class="item-image" onerror="this.style.display='none';">
+            <a href="images/robot_in_action.gif" target="_blank" class="image-link">
+              <img src="images/robot_in_action.gif" alt="High Stakes Simulator" class="item-image">
+            </a>
             <div class="item-content">
-              <div class="item-title">Project Title</div>
-              <div class="item-date">Date / Time Period</div>
-              <div class="item-links">
-                <a href="#">[Code]</a>
-                <a href="#">[Website]</a>
-              </div>
+              <div class="item-title">High Stakes Simulator</div>
+              <div class="item-date">2024-2025 <a href="https://github.com/arianalei/HighStakesSimulator">[Code]</a></div>
               <div class="item-description">
-                Brief description of your project. Explain what you built, 
-                technologies used, and what you learned. This should be concise but informative.
+                I built a 2D robot simulator to help my VEX VRC team test our autonomous routines before running them on the actual robot. 
+                Using Python, pygame, and pygame_gui, we created an interactive visualization where we can see the robot move on the 
+                competition field, test different movement commands, and verify our sequences work correctly. It includes features like 
+                multiple starting positions, a command queue system, and a real-time timer to track our autonomous routine duration.
               </div>
             </div>
           </div>
@@ -295,20 +341,17 @@
         
         <div class="item">
           <div class="item-content-wrapper">
-            <img src="images/competition1.png" alt="Competition 1" class="item-image" onerror="this.style.display='none';">
+            <a href="images/IMG_0936.gif" target="_blank" class="image-link">
+              <img src="images/IMG_0936.gif" alt="World Scholar's Cup" class="item-image">
+            </a>
             <div class="item-content">
-              <div class="item-title">Competition Name</div>
-              <div class="item-meta">
-                <strong>Role:</strong> Your Role | <strong>Team:</strong> Team Name
-              </div>
-              <div class="item-date">Date / Location</div>
-              <div class="item-links">
-                <a href="#">[Website]</a>
-                <a href="#">[Results]</a>
-              </div>
+              <div class="item-title">World Scholar's Cup</div>
+              <div class="item-date">Since 2023 | <a href="https://www.scholarscup.org/">[Website]</a></div>
               <div class="item-description">
-                Description of the competition, your involvement, achievements, 
-                and what you learned from the experience.
+                <strong>Achievements:</strong><br>
+                • 9th place team overall in Global Finals at Yale University, November 2025<br>
+                • 1st place team overall in Doha Global Round, June 2025<br>
+                • 19th place team overall in Global Finals at Yale University, November 2024
               </div>
             </div>
           </div>
@@ -322,7 +365,9 @@
         
         <div class="item">
           <div class="item-content-wrapper">
-            <img src="images/activity1.png" alt="Activity 1" class="item-image" onerror="this.style.display='none';">
+            <a href="images/activity1.png" target="_blank" class="image-link">
+              <img src="images/activity1.png" alt="Activity 1" class="item-image" onerror="this.style.display='none';">
+            </a>
             <div class="item-content">
               <div class="item-title">Activity Name</div>
               <div class="item-meta">

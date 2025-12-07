@@ -4,296 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ariana Lei</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #fff;
-        padding: 0;
-        margin: 0;
-      }
-
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      nav {
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-
-      nav li::before {
-        content: '•';
-        margin-right: 5px;
-      }
-
-      nav a {
-        color: #333;
-        text-decoration: none;
-        font-size: 0.95em;
-      }
-
-      nav a:hover {
-        color: #0066cc;
-      }
-
-      .header-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 30px;
-      }
-
-      .header-table td {
-        vertical-align: top;
-        padding: 10px;
-      }
-
-      .header-table td:first-child {
-        width: 70%;
-      }
-
-      .header-table td:last-child {
-        text-align: right;
-      }
-
-      .header-content {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .profile-photo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #e0e0e0;
-        flex-shrink: 0;
-        cursor: pointer;
-        transition: opacity 0.2s ease;
-      }
-
-      .profile-photo:hover {
-        opacity: 0.8;
-      }
-
-      .header-text {
-        flex: 1;
-      }
-
-      h1 {
-        font-size: 2em;
-        margin-bottom: 5px;
-        color: #222;
-        font-weight: normal;
-      }
-
-      .title {
-        font-size: 1em;
-        color: #333;
-        margin-bottom: 5px;
-      }
-
-      .contact-links {
-        font-size: 0.9em;
-        line-height: 1.8;
-      }
-
-      .contact-links a {
-        color: #0066cc;
-        text-decoration: none;
-      }
-
-      .contact-links a:hover {
-        text-decoration: underline;
-      }
-
-      section {
-        margin-bottom: 40px;
-      }
-
-      section h2 {
-        font-size: 1.3em;
-        margin-bottom: 15px;
-        color: #222;
-        font-weight: bold;
-      }
-
-      .item {
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #f0f0f0;
-      }
-
-      .item:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-
-      .item-content-wrapper {
-        display: flex;
-        gap: 18px;
-        align-items: flex-start;
-      }
-
-      .item-image {
-        width: 150px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 3px;
-        flex-shrink: 0;
-        background-color: #f5f5f5;
-        border: 1px solid #e0e0e0;
-        cursor: pointer;
-        transition: opacity 0.2s ease;
-      }
-
-      .item-image:hover {
-        opacity: 0.8;
-      }
-
-      .item-image[src$=".gif"] {
-        object-fit: contain;
-        background-color: #f0f0f0;
-      }
-
-      .item-image[src$=".png"],
-      .item-image[src$=".PNG"] {
-        object-fit: cover;
-        object-position: center;
-      }
-
-      .image-link {
-        display: inline-block;
-        text-decoration: none;
-      }
-
-      .profile-photo {
-        cursor: pointer;
-        transition: opacity 0.2s ease;
-      }
-
-      .profile-photo:hover {
-        opacity: 0.8;
-      }
-
-      .item-content {
-        flex: 1;
-      }
-
-      .item-title {
-        font-size: 1em;
-        font-weight: 600;
-        margin-bottom: 5px;
-        color: #222;
-      }
-
-      .item-meta {
-        color: #666;
-        font-size: 0.9em;
-        margin-bottom: 5px;
-        line-height: 1.5;
-      }
-
-      .item-meta a {
-        color: #0066cc;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .item-meta a:hover {
-        color: #0052a3;
-        text-decoration: underline;
-      }
-
-      .item-date {
-        color: #888;
-        font-size: 0.85em;
-        font-style: italic;
-        margin-bottom: 8px;
-      }
-
-      .item-date a {
-        color: #0066cc;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .item-date a:hover {
-        color: #0052a3;
-        text-decoration: underline;
-      }
-
-      .item-date em {
-        color: #888;
-        font-size: 0.9em;
-        font-style: italic;
-        font-weight: normal;
-      }
-
-      .item-links {
-        margin-bottom: 8px;
-      }
-
-      .item-links a {
-        color: #0066cc;
-        text-decoration: none;
-        font-size: 0.9em;
-        margin-right: 8px;
-      }
-
-      .item-links a:hover {
-        text-decoration: underline;
-      }
-
-      .item-description {
-        color: #555;
-        line-height: 1.6;
-        font-size: 0.95em;
-        margin-top: 8px;
-      }
-
-      @media (max-width: 768px) {
-        .header-table {
-          display: block;
-        }
-
-        .header-table td {
-          display: block;
-          text-align: left !important;
-        }
-
-        .header-content {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .item-content-wrapper {
-          flex-direction: column;
-        }
-
-        .item-image {
-          width: 100%;
-          height: 150px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
@@ -426,15 +137,36 @@
         
         <div class="item">
           <div class="item-content-wrapper">
+            <a href="images/IMG_7026.JPEG" target="_blank" class="image-link">
+              <img src="images/IMG_7026.JPEG" alt="Sea Cadets" class="item-image">
+            </a>
+            <div class="item-content">
+              <div class="item-title">Sea Cadets</div>
+              <div class="item-meta">
+                <strong>Role:</strong> Petty Officer Third Class
+              </div>
+              <div class="item-date">Since 2023 | <a href="https://www.seacadets.org/">[Website]</a></div>
+              <div class="item-description">
+                I am a member of the United States Naval Sea Cadet Corps, the Navy's youth development program. As a Sea Cadet, I participate in training opportunities 
+                in a structured, team-based environment. I joined the program in 2023 and currently hold the rank of <strong>Petty Officer Third Class</strong>. I have 
+                participated in summer trainings in photojournalism, and for two summers had the priviledge to be selected for the basics and advanced airman programs. During these programs, 
+                I resided at the Lemoore Aviation Center and learned hands-on inspection of F-22 (basic) and F-35 (advanced) warplanes, as well as flight simulators. <a href="seacadets.html">More on this activity.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-content-wrapper">
             <a href="images/workshop.gif" target="_blank" class="image-link">
               <img src="images/workshop.gif" alt="RoboEmpowerment" class="item-image">
             </a>
             <div class="item-content">
               <div class="item-title">RoboEmpowerment</div>
               <div class="item-meta">
-                <strong>Organization:</strong> RoboEmpowerment <a href="https://1stcard.top/Robotics/"><em>[Website]</em></a><br>
                 <strong>Role:</strong> Founding Member, Technical Volunteer to ICC Robotics Program
               </div>
+              <div class="item-date">Since 2024 | <a href="https://1stcard.top/Robotics/">[Website]</a></div>
               <div class="item-description">
                 I am a founding member of RoboEmpowerment, a non-profit organization dedicated to propagating interest in robotics and fostering the younger generation. 
                 Our mission is to build a future where everyone can code, create, and innovate through robotics. 

@@ -132,7 +132,7 @@
         font-size: 1.3em;
         margin-bottom: 15px;
         color: #222;
-        font-weight: normal;
+        font-weight: bold;
       }
 
       .item {
@@ -173,6 +173,12 @@
         background-color: #f0f0f0;
       }
 
+      .item-image[src$=".png"],
+      .item-image[src$=".PNG"] {
+        object-fit: cover;
+        object-position: center;
+      }
+
       .image-link {
         display: inline-block;
         text-decoration: none;
@@ -205,6 +211,17 @@
         line-height: 1.5;
       }
 
+      .item-meta a {
+        color: #0066cc;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .item-meta a:hover {
+        color: #0052a3;
+        text-decoration: underline;
+      }
+
       .item-date {
         color: #888;
         font-size: 0.85em;
@@ -221,6 +238,13 @@
       .item-date a:hover {
         color: #0052a3;
         text-decoration: underline;
+      }
+
+      .item-date em {
+        color: #888;
+        font-size: 0.9em;
+        font-style: italic;
+        font-weight: normal;
       }
 
       .item-links {
@@ -317,6 +341,24 @@
         
         <div class="item">
           <div class="item-content-wrapper">
+            <a href="images/IMG_1673.PNG" target="_blank" class="image-link">
+              <img src="images/IMG_1673.PNG" alt="VEX VRC Push Back Robot" class="item-image">
+            </a>
+            <div class="item-content">
+              <div class="item-title">VEX VRC Push Back Robot Code</div>
+              <div class="item-date">2025-2026 <em>[Code Coming Soon]</em></div>
+              <div class="item-description">
+                A complete revamp of the robot code for this year's VEX VRC Push Back competition. This new codebase features significant improvements including 
+                integration of LemLib for much improved code modularity and sophisticated refined (curved) control. We also added odometry with both horizontal 
+                and vertical tracking wheels for precise position tracking and navigation. The new architecture provides better maintainability and more advanced 
+                autonomous capabilities compared to previous seasons!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-content-wrapper">
             <a href="images/IMG_0035.gif" target="_blank" class="image-link">
               <img src="images/IMG_0035.gif" alt="VEX VRC High Stakes Robot" class="item-image">
             </a>
@@ -369,7 +411,7 @@
               <div class="item-description">
                 <strong>Achievements:</strong><br>
                 • 9th place team overall in Global Finals at Yale University, November 2025<br>
-                • 1st place team overall in Doha Global Round, June 2025<br>
+                <strong style="color: #0066cc;">• 1st place team overall in Doha Global Round, Qatar, June 2025</strong><br>
                 • 19th place team overall in Global Finals at Yale University, November 2024
               </div>
             </div>
@@ -384,21 +426,21 @@
         
         <div class="item">
           <div class="item-content-wrapper">
-            <a href="images/activity1.png" target="_blank" class="image-link">
-              <img src="images/activity1.png" alt="Activity 1" class="item-image" onerror="this.style.display='none';">
+            <a href="images/workshop.gif" target="_blank" class="image-link">
+              <img src="images/workshop.gif" alt="RoboEmpowerment" class="item-image">
             </a>
             <div class="item-content">
-              <div class="item-title">Activity Name</div>
+              <div class="item-title">RoboEmpowerment</div>
               <div class="item-meta">
-                <strong>Organization:</strong> Organization Name | <strong>Role:</strong> Your Role
-              </div>
-              <div class="item-date">Time Period</div>
-              <div class="item-links">
-                <a href="#">[Website]</a>
+                <strong>Organization:</strong> RoboEmpowerment <a href="https://1stcard.top/Robotics/"><em>[Website]</em></a><br>
+                <strong>Role:</strong> Founding Member, Technical Volunteer to ICC Robotics Program
               </div>
               <div class="item-description">
-                Description of your involvement, responsibilities, achievements, 
-                and impact. Explain what you did and what you learned.
+                I am a founding member of RoboEmpowerment, a non-profit organization dedicated to propagating interest in robotics and fostering the younger generation. 
+                Our mission is to build a future where everyone can code, create, and innovate through robotics. 
+                Our programs include hands-on robotics workshops introducing students to programming, engineering, and problem-solving; 
+                mentorship programs connecting students with industry professionals; and robotics competitions that foster teamwork, innovation, 
+                and healthy competition. I also serve as a technical mentor volunteer to the ICC Robotics Program and Tournaments.
               </div>
             </div>
           </div>

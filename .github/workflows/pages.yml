@@ -26,6 +26,12 @@ jobs:
         with:
           lfs: true  # This is crucial - it pulls LFS files
 
+      - name: Verify LFS files
+        run: |
+          echo "Checking LFS files..."
+          ls -lh images/*.gif || true
+          file images/*.gif || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
